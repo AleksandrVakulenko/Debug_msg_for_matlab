@@ -4,11 +4,11 @@ Matlab R2021b.
 
 ------------
 
-If global "debug_mgs_status" is eual to "enable":
-- DEBUG_MSG prints a message in Matlab console
+- If global "debug_mgs_status" is eual to "enable":
+DEBUG_MSG prints a message in Matlab console
 
-If global "debug_mgs_status" is not eual to "enable":
-- no effect
+- If global "debug_mgs_status" is not eual to "enable":
+no effect
 
 Global flag could be changed by call of DEBUG_MSG_ENABLE(status) with 
 status equal to "enable" or "disable".

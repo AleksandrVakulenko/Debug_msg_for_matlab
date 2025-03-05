@@ -24,7 +24,7 @@ function DEBUG_MSG(msg, color, style)
 arguments
     msg
     color {mustBeMember(color, ["black", "red", "orange"])} = "black"
-    style {mustBeMember(style, ["common", "ctor", "dtor"])} = "common"
+    style {mustBeMember(style, ["common", "ctor", "dtor", "tab"])} = "common"
 end
 
 try
@@ -36,14 +36,20 @@ end
 
 if is_debug_msg_active()
 
-    fprintf(1, ['debug_msg: '])
+%     fprintf(1, ['debug_msg: '])
     switch style
         case "common"
+            fprintf(1, ['debug_msg:'])
             Pref = '';
         case "ctor"
-            Pref = '  (C)>>';
+            fprintf(1, ['(>)Constr:'])
+            Pref = '';
         case "dtor"
-            Pref = '<<(D)  ';
+            fprintf(1, ['(<<)Destr:'])
+            Pref = '';
+        case "tab"
+            fprintf(1, ['          '])
+            Pref = '';
     end
 
     msg = [Pref ' ' msg];

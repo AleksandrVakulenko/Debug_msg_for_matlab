@@ -20,6 +20,9 @@
 % destructor. By default messages are plain text (style = "common").
 % ------------
 
+% TODO list:
+% 1) add 3 levels of msg
+
 function DEBUG_MSG(msg, color, style)
 arguments
     msg

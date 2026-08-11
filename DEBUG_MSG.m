@@ -39,7 +39,6 @@ end
 
 if is_debug_msg_active()
 
-%     fprintf(1, ['debug_msg: '])
     switch style
         case "common"
             fprintf(1, ['debug_msg:'])
@@ -56,6 +55,10 @@ if is_debug_msg_active()
     end
 
     msg = [Pref ' ' msg];
+
+	msg = char(msg);
+	msg = strrep(msg, '/', '//');
+	msg = strrep(msg, '%', '%%');
 
     switch color
         case "black"

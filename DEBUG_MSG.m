@@ -25,17 +25,14 @@
 
 function DEBUG_MSG(msg, color, style)
 arguments
-    msg
+    msg string
     color {mustBeMember(color, ["black", "red", "orange"])} = "black"
     style {mustBeMember(style, ["common", "ctor", "dtor", "tab"])} = "common"
 end
 
-try
-    msg = char(string(msg));
-catch
-    warning('problem in debug_msg')
-    return;
-end
+
+msg = char(msg);
+
 
 if is_debug_msg_active()
 

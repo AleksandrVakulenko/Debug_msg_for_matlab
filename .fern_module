@@ -1,6 +1,6 @@
-name:
-Debug_msg
-
-dependencies:
-
-info:
+{
+  "name": "Debug_msg",
+  "dependecies": [],
+  "info": "Сustomizable debug messages",
+  "Tegs": "debug; pring; console"
+}
